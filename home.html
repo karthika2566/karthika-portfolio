@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Karthika — Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#02020a;--accent1:#5b21b6;--accent2:#ff6bb0;--muted:#8f9aa6;--text:#e6eef6}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased}
+    h1,h2,h3,h4,h5{font-family:Poppins,Inter;margin:0;color:var(--text)}
+    p,li,div,span,a,input,textarea,button{color:var(--text)}
+    a{color:var(--accent2)}
+    .btn-ghost{color:var(--muted)}
+
+    /* animated soft gradient */
+    .animated-bg{position:fixed;inset:0;z-index:-2;pointer-events:none;overflow:hidden}
+    .bg-layer{position:absolute;inset:-22% -22%;background:linear-gradient(120deg,#6b21b6, #9b5cf6 45%, #ff6bb0 75%);filter:blur(52px);opacity:0.06;background-size:220% 220%;animation:shift 26s ease-in-out infinite}
+    @keyframes shift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    .particles{position:absolute;inset:0}
+    .particle{position:absolute;border-radius:50%;background:rgba(255,255,255,0.02);opacity:0.26;will-change:transform;animation:float var(--d,16s) linear infinite}
+    @keyframes float{0%{transform:translateY(8vh) translateX(0)}100%{transform:translateY(-14vh) translateX(30px)}}
+
+    /* layout */
+    .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:36px}
+    .panel{width:100%;max-width:980px;margin:0 auto;text-align:center;padding:46px;border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);border:1px solid rgba(255,255,255,0.03);backdrop-filter:blur(6px);position:relative;overflow:hidden}
+    .panel::before{content:'';position:absolute;left:4%;right:4%;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.04),transparent);opacity:0.6}
+    .panel{transition:transform .4s ease,box-shadow .4s ease}
+
+    .avatar{width:220px;height:220px;border-radius:50%;overflow:hidden;margin:0 auto;border:6px solid rgba(255,255,255,0.04);box-shadow:0 48px 120px rgba(2,6,23,0.6)}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .title{font-family:Poppins,Inter;font-weight:800;font-size:28px;margin-top:18px}
+    .subtitle{color:var(--muted);margin-top:6px;font-size:15px}
+    .small-icon{width:72px;height:72px;display:block;margin:0 auto 14px;border-radius:14px}
+
+    .actions{margin-top:22px;display:flex;gap:12px;justify-content:center}
+    .btn{padding:12px 18px;border-radius:12px;font-weight:700;border:1px solid rgba(255,255,255,0.04);cursor:pointer;text-decoration:none;color:inherit}
+    .btn-primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white;box-shadow:0 18px 54px rgba(11,83,148,0.12)}
+    .btn-ghost{background:transparent;color:var(--muted)}
+
+    footer{margin-top:30px;color:var(--muted);font-size:13px}
+
+    @media (max-width:760px){.panel{padding:28px}.avatar{width:140px;height:140px}.title{font-size:20px}}
+  </style>
+</head>
+<body>
+  <div class="animated-bg" aria-hidden>
+    <div class="bg-layer"></div>
+    <div class="particles" aria-hidden>
+      <span class="particle" style="left:10%;top:78%;width:28px;height:28px;--d:20s"></span>
+      <span class="particle" style="left:28%;top:72%;width:16px;height:16px;--d:14s"></span>
+      <span class="particle" style="left:44%;top:80%;width:10px;height:10px;--d:18s"></span>
+      <span class="particle" style="left:66%;top:76%;width:22px;height:22px;--d:22s"></span>
+      <span class="particle" style="left:82%;top:82%;width:12px;height:12px;--d:16s"></span>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <section class="panel">
+      <img class="small-icon" src="assets/profile-icon.svg" alt="Profile icon">
+      <div class="avatar">
+        <img src="assets/karthi port.jpg" alt="Profile">
+      </div>
+      <div class="title"><span class="section-emoji" aria-hidden="true">💼</span>Web Developer &amp; Frontend Developer</div>
+      <div class="subtitle">Web Developer • Frontend Developer • Full-Stack</div>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="index.html">View Portfolio</a>
+        <a class="btn btn-ghost" href="index.html#contact">Contact</a>
+      </div>
+
+      <footer>© <strong>Karthika</strong> — Crafted with care</footer>
+    </section>
+  </main>
+</body>
+</html>
